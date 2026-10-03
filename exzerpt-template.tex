@@ -1,0 +1,382 @@
+\documentclass[11pt,a4paper]{article}
+
+% ==================================================
+% Sprache und Schrift
+% ==================================================
+
+\usepackage{fontspec}
+\usepackage[ngerman]{babel}
+
+% Schrift
+\setmainfont{Arial}
+
+% ==================================================
+% Seitenformat und Seitenränder
+% ==================================================
+
+\usepackage[
+    a4paper,
+    landscape,
+    left=2cm,
+    right=2cm,
+    top=2cm,
+    bottom=2cm
+]{geometry}
+
+% ==================================================
+% Tabellen
+% ==================================================
+
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{xcolor}
+
+% ==================================================
+% Farben
+% ==================================================
+
+\definecolor{headerblue}{RGB}{45,75,110}
+\definecolor{lightblue}{RGB}{235,242,248}
+
+% ==================================================
+% Hyperlinks
+% ==================================================
+
+\usepackage[
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue
+]{hyperref}
+
+% ==================================================
+% Eigene Befehle für das Glossar
+% ==================================================
+
+% Verlinkt einen Begriff aus dem Text mit
+% dem entsprechenden Glossareintrag.
+
+\newcommand{\gls}[1]{%
+    \hyperlink{glossar:#1}{\textcolor{blue}{#1}}%
+}
+
+% ==================================================
+% Dokumenteinstellungen
+% ==================================================
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+
+% ==================================================
+% Dokument
+% ==================================================
+
+\begin{document}
+
+% ==================================================
+% TITEL
+% ==================================================
+
+\begin{center}
+
+    {\LARGE\bfseries Exzerpt}
+
+    \vspace{0.3cm}
+
+    {\large Zusammenfassung und Reflexion eines Textes}
+
+\end{center}
+
+\vspace{0.8cm}
+
+% ==================================================
+% EXZERPTKOPF
+% ==================================================
+
+\section*{Exzerptkopf}
+
+\renewcommand{\arraystretch}{1.5}
+
+\begin{tabular}{@{}p{5cm}p{21cm}@{}}
+
+\textbf{Thema}
+&
+\\[1.2cm]
+
+\textbf{Bibliographische Angaben}
+&
+\\[2cm]
+
+\textbf{Anmerkungen}
+&
+\\[2.5cm]
+
+\end{tabular}
+
+\vspace{0.5cm}
+
+% ==================================================
+% EXZERPT
+% ==================================================
+
+\section*{Exzerpt}
+
+\small
+
+\renewcommand{\arraystretch}{1.5}
+
+% --------------------------------------------------
+% Vier Spalten:
+%
+% Seite               = 2 cm
+% Thema               = 4.5 cm
+% Wichtige Aussage    = 9.5 cm
+% Eigene Gedanken     = 9.5 cm
+%
+% --------------------------------------------------
+
+\begin{longtable}{@{}p{2cm}p{4.5cm}p{9.5cm}p{9.5cm}@{}}
+
+% ==================================================
+% Tabellenkopf
+% ==================================================
+
+\toprule
+
+\rowcolor{headerblue}
+
+\color{white}\textbf{Seite}
+&
+\color{white}\textbf{Thema}
+&
+\color{white}\textbf{Wichtige Aussage}
+&
+\color{white}\textbf{Eigene Gedanken}
+
+\\
+
+\midrule
+
+\endfirsthead
+
+% ==================================================
+% Tabellenkopf auf Folgeseiten
+% ==================================================
+
+\toprule
+
+\rowcolor{headerblue}
+
+\color{white}\textbf{Seite}
+&
+\color{white}\textbf{Thema}
+&
+\color{white}\textbf{Wichtige Aussage}
+&
+\color{white}\textbf{Eigene Gedanken}
+\\
+
+\midrule
+
+\endhead
+
+% ==================================================
+% Tabellenfuß
+% ==================================================
+
+\bottomrule
+
+\endfoot
+
+% ==================================================
+% BEISPIELZEILEN
+% ==================================================
+
+12
+&
+Textverständnis
+&
+Die \gls{Hermeneutik} beschäftigt sich mit
+der Interpretation und dem Verstehen von Texten.
+Dabei werden sowohl der Text selbst als auch
+sein historischer und kultureller Zusammenhang
+berücksichtigt.
+&
+Der Begriff ist insbesondere für die Interpretation
+historischer Texte relevant. Interessant wäre ein
+Vergleich mit modernen Methoden der
+Textinterpretation.
+
+\\[2.5cm]
+
+13
+&
+Wissenschaftstheorie
+&
+Ein wissenschaftliches \gls{Paradigma}
+bestimmt, welche Fragen innerhalb eines
+bestimmten wissenschaftlichen Rahmens gestellt
+werden können und welche Methoden dabei
+als angemessen gelten.
+&
+Hier stellt sich die Frage, inwieweit sich
+Paradigmen historisch verändern und welche
+Folgen ein Paradigmenwechsel für die
+wissenschaftliche Forschung hat.
+
+\\[2.5cm]
+
+14
+&
+Sprachliche Auseinandersetzung
+&
+Der Autor verwendet den Begriff
+\gls{Diskurs}, um die gesellschaftliche
+Auseinandersetzung mit einem bestimmten
+Thema zu beschreiben.
+&
+Der Begriff könnte mit anderen Formen
+öffentlicher Kommunikation verglichen werden.
+
+\\[2.5cm]
+
+15
+&
+Textinterpretation
+&
+Die \gls{Exegese} dient dazu, die Bedeutung
+eines Textes systematisch zu erschließen.
+Dabei werden unterschiedliche Ebenen
+des Textes berücksichtigt.
+&
+Der Unterschied zwischen Exegese und
+allgemeiner Interpretation sollte genauer
+untersucht werden.
+
+\\[2.5cm]
+
+16
+&
+&
+&
+\\[2.5cm]
+
+17
+&
+&
+&
+\\[2.5cm]
+
+18
+&
+&
+&
+\\[2.5cm]
+
+19
+&
+&
+&
+\\[2.5cm]
+
+20
+&
+&
+&
+\\[2.5cm]
+
+\end{longtable}
+
+\normalsize
+
+% ==================================================
+% GLOSSAR
+% ==================================================
+
+\newpage
+
+\section*{Glossar}
+
+\renewcommand{\arraystretch}{1.5}
+
+\begin{longtable}{@{}p{5cm}p{21cm}@{}}
+
+% ==================================================
+% Tabellenkopf
+% ==================================================
+
+\toprule
+
+\textbf{Begriff}
+&
+\textbf{Erläuterung}
+
+\\
+
+\midrule
+
+\endfirsthead
+
+\toprule
+
+\textbf{Begriff}
+&
+\textbf{Erläuterung}
+
+\\
+
+\midrule
+
+\endhead
+
+% ==================================================
+% Tabellenfuß
+% ==================================================
+
+\bottomrule
+
+\endfoot
+
+% ==================================================
+% GLOSSARBEGRIFFE
+% ==================================================
+
+\hypertarget{glossar:Hermeneutik}{}
+\textbf{Hermeneutik}
+&
+Lehre und Theorie des Verstehens und der Interpretation
+von Texten, insbesondere unter Berücksichtigung ihres
+historischen und kulturellen Zusammenhangs.
+
+\\[1cm]
+
+\hypertarget{glossar:Paradigma}{}
+\textbf{Paradigma}
+&
+Grundlegendes Denkmuster oder wissenschaftlicher
+Bezugsrahmen, innerhalb dessen bestimmte Fragen
+und Probleme betrachtet werden.
+
+\\[1cm]
+
+\hypertarget{glossar:Diskurs}{}
+\textbf{Diskurs}
+&
+Geordnete Form sprachlicher Auseinandersetzung über
+einen bestimmten Gegenstand oder Themenbereich.
+
+\\[1cm]
+
+\hypertarget{glossar:Exegese}{}
+\textbf{Exegese}
+&
+Auslegung und Interpretation eines Textes mit dem Ziel,
+dessen Bedeutung systematisch zu erschließen.
+
+\\[1cm]
+
+\end{longtable}
+
+\end{document}
