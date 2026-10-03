@@ -66,6 +66,14 @@
     \hyperlink{glossar:#1}{\textcolor{blue}{#1}}%
 }
 
+% Kapiteltrenner in der Longtable
+% \chapterrow{Text}
+\newcommand{\chapterrow}[1]{%
+    \rowcolor{gray!10}%
+    \multicolumn{4}{@{}l@{}}{\color{headerblue}\textbf{\large #1}}%
+    \\[3pt]%
+}
+
 % ==================================================
 % Dokumenteinstellungen
 % ==================================================
